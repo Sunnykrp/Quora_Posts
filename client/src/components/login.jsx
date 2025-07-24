@@ -10,7 +10,7 @@ const Login =()=>{
     const API_URL = import.meta.env.VITE_API_URL;
 
    const handleLogin = async (e) => {
-  e.preventDefault(); // prevent form reload
+  e.preventDefault(); // prevent f
 
   try {
     const res = await fetch(`${API_URL}/api/auth/login`, {
