@@ -5,6 +5,7 @@ const cookieParser=require('cookie-parser');
 const path=require('path');
 const authRoutes=require('./routes/authRoutes.js');
 const cors = require('cors');
+const postRoutes=require('./routes/postRoutes.js');
 
 dotenv.config();
 const app=express();
@@ -15,8 +16,8 @@ app.use(cors({
     origin: 'http://localhost:5174', // Adjust this to your client URL
     credentials: true, // Allow cookies to be sent with requests
 }));
-
 app.use('/api/auth', authRoutes);
+app.use('/api/posts',postRoutes);
 const PORT=process.env.PORT||3000;
 const MONGO_URI=process.env.MONGO_URI;
 

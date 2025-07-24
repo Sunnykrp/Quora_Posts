@@ -8,8 +8,6 @@ import Login from './components/login';
 import Navbar from './components/Navbar';
 
 function App() {
-  
-
   return (
     <>
     <ToastContainer />
