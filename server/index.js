@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-      origin:"http://localhost:5173",
+    origin: "http://localhost:5173",
     credentials: true, // Allow cookies to be sent with requests
   })
 );
@@ -32,7 +32,7 @@ mongoose
   })
   .then(() => {
     console.log("Connected to MongoDB");
-    app.listen(process.env.PORT || PORT, '0.0.0.0', () => {
-  console.log(`Server running`);
-});
+    app.listen(process.env.PORT || PORT, "0.0.0.0", () => {
+      console.log(`Server running`);
+    });
   });
