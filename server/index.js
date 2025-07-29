@@ -32,7 +32,7 @@ mongoose
   })
   .then(() => {
     console.log("Connected to MongoDB");
-    app.listen(process.env.PORT || PORT, "0.0.0.0", () => {
-      console.log(`Server running`);
+    app.listen(process.env.PORT, () => {
+      console.log(`Server running,${PORT}`);
     });
   });
